@@ -115,6 +115,7 @@ nav .nav__items li:hover::after, nav .nav__items li:hover a{
     justify-content: space-between;
     height: 100vh;
     margin-top: -80px;
+    border-right:2px solid #666 
 }
 
 .sidebar .sidebar__icon{
@@ -242,7 +243,6 @@ nav .nav__items li:hover::after, nav .nav__items li:hover a{
         align-items: center;
         position: relative;
         background: #000;
-        /* position: fixed; */
     }
     nav .nav__items{
         transition:all .5s ease;
