@@ -242,6 +242,7 @@ nav .nav__items li:hover::after, nav .nav__items li:hover a{
         align-items: center;
         position: relative;
         background: #000;
+        /* position: fixed; */
     }
     nav .nav__items{
         transition:all .5s ease;
