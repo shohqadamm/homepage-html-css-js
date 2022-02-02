@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    transition:all .5s ease;
+
+}
+ul{
+    list-style-type: none;
+    display: flex;
+}
+body{
+    background: url(../images/Telegraph_Sticker_2_5461095588818851515.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container{
+    width:80%;
+    margin: auto;
+}
+
+/* NAVBAR */
+nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav{
+    width: calc(100% - 80px);
+    margin-left: 80px;
+    color: #fff;
+}
+nav .nav__items{
+    position:relative
+}
+nav .nav__items li{
+    padding: 30px 10px;
+    position: relative;
+}
+nav .nav__items li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 100px;
+    background: gold;
+    transition:all .5s ease;
+    margin:auto
+}
+nav .nav__items li:hover::after, nav .nav__items li:hover a{
+    width: 100%;
+    color: gold;
+}
+.navbar__toggler{
+    display: none;
+}
+@media screen and (max-width:768px){
+    .navbar__toggler{
+        display: block;
+    }
+    nav{
+        z-index: 2;
+        height: 8vh;
+        margin-left: 0;
+        width: 100%;
+        align-items: center;
+        position: relative;
+    }
+    nav .nav__items{
+        transition:all .5s ease;
+        position: absolute;
+        right: -100%;
+        height: 92vh;
+        background: #000;
+        flex-direction: column;
+        top:8vh;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    nav .nav__items.active{
+        height: 92vh;
+        right: 0;
+        background: #000;
+        flex-direction: column;
+        top:8vh;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+
+/* SIDEBAR */
+
+.sidebar{
+    width: 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    margin-top: -80px;
+}
+
+.sidebar .sidebar__icon{
+    width:100%;
+    height: 80px;
+    background: #666;
+    display: grid;
+    place-items: center;
+}
+.sidebar .sidebar__icon .bars{
+    width: 30px;
+    height: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sidebar .sidebar__icon .bars .bar{
+    width: 100%;
+    margin-left: auto;
+    height: 2px;
+    background: #fff;
+}
+.sidebar .sidebar__list{
+    transform: rotate( -90deg );
+    margin-bottom: 80px;
+}
+
+.sidebar .sidebar__list ul li{
+    padding: 0 15px;
+}
+
+
+/* SHOWCASE */
+
+.progress__bars{
+    width: 200px;
+    height: 2px;
+    background: #666;
+    position: relative;
+}
+.progress__bar{
+    width: 30%;
+    height: 100%;
+    background: gold;
+    margin: 10px 0;
+}
+
+
+.home__content--upper{
+    display: flex;
+}
+.col-md-6{
+    width: 50%;
+    color: #fff;
+    margin-top: 190px;
+}
+.col-md-6 p{
+
+    line-height: 30px;font-weight: 100;font-size: 1.2rem;
+}
+
+/* home__content  */
+
+.home__content{
+    width: calc(100% - 80px);
+    height: calc(100% - 80px);
+    margin-left: 80px;
+    position: absolute;
+    top: 80px;
+}
+
+
+.home__content--lower{
+    width: calc(100% - 80px);
+    height: calc(100% - 80px);
+    margin-left: 80px;
+    position: relative;
+    top:-200px;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(20px);
+    color: #fff;
+}
+.home__content--lower .container{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+.home__content--lower .container img{
+    width: 100%;
+    height: 100%;
+}
+.dots{
+    display: flex;
+    gap: 5px;
+}
+.dot{
+    width: 10px;
+    height: 10px;
+    background: #666;
+    border-radius: 50%;
+    cursor: pointer;
+}
